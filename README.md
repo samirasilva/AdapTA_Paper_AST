@@ -5,7 +5,7 @@
 
 **Paper Title**: An Adaptive Testing Approach Based on Field Data
 
-**Submitted to**: Automation of Software Test (AST) 
+**Submitted to**: Automation of Software Test (AST) Conference
 
 **Abstract**: The growing need to test systems post-release has led to extending testing activities into production environments, where uncertainty and dynamic conditions pose significant challenges. Field testing approaches, especially Self-Adaptive Testing in the Field (SATF), face hurdles like managing unpredictability, minimizing system overhead, and reducing human intervention, among others. 
 Despite its importance, SATF remains underexplored in the literature. This work introduces AdapTA (Adaptive Testing Approach), a novel SATF strategy tailored for testing Body Sensor Networks (BSNs). BSNs are networks of wearable or implantable sensors designed to monitor physiological and environmental data. AdapTA employs an ex-vivo approach, using real-world data collected from the field to simulate patient behavior in in-house experiments. 
