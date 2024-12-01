@@ -18,7 +18,7 @@ Field data are used to derive Discrete-Time Markov Chain (DTMC) models, which si
 
 ## **Clone this repository**:
 ```
-$ git clone https://github.com/fedebotu/clone-anonymous-github.git && cd clone-anonymous-github
-$ python3 src/download.py --url https://anonymous.4open.science/r/AdapTA_Paper_AST-3715/
-$ cd AdapTA_Paper_AST-3715/
+$ curl -o AdapTA_Paper.zip https://anonymous.4open.science/api/repo/AdapTA_Paper_AST-3715/zip
+$ unzip AdapTA_Paper.zip -d AdapTA_Paper/
+$ cd AdapTA_Paper/
 ```
