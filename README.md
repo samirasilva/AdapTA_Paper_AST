@@ -15,3 +15,8 @@ Field data are used to derive Discrete-Time Markov Chain (DTMC) models, which si
 1. Download and install the [ROS Noetic for Ubuntu 20.04](http://wiki.ros.org/noetic/Installation/Ubuntu)
 2. Download and install the [SA-BSN](https://github.com/lesunb/bsn/tree/1c45cd8f4c43e36fcf5665940d5ce7c66b907b31)
 
+## **Clone this repository**:
+$ git clone https://github.com/fedebotu/clone-anonymous-github.git && cd clone-anonymous-github
+$ python3 src/download.py --url https://anonymous.4open.science/r/AdapTA_Paper_AST-3715/
+$ cd AdapTA_Paper_AST-3715/
+
