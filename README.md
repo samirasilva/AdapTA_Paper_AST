@@ -22,3 +22,137 @@ $ curl -o AdapTA_Paper.zip https://anonymous.4open.science/api/repo/AdapTA_Paper
 $ unzip AdapTA_Paper.zip -d AdapTA_Paper/
 $ cd AdapTA_Paper/
 ```
+
+## 1. AdapTA
+### **Scenario 1**:
+1. Enter the folder with scripts:
+```
+$ cd AdapTA/S1_SensorDeactivation/Scripts/
+```
+2. Transform transition matrices into patients:
+```
+$ python 0_convert_tm_into_patient.py
+```
+3. Prepare the SA-BSN to AdapTA-S1:
+```
+$ python 1_copy_needed_files_s1.py
+```
+4. Run the SA-BSN:
+```
+$ bash 2_script_all_profiles.sh
+```
+5. Parse the log files:
+```
+$ python 3_script_read.py
+```
+
+### **Scenario 2**:
+1. Enter the folder with scripts:
+```
+$ cd AdapTA/S2_PatientProfile/Scripts/
+```
+2. Transform transition matrices into patients:
+```
+$ python 0_convert_tm_into_patient.py
+```
+3. Prepare the SA-BSN to AdapTA-S1:
+```
+$ python 1_copy_needed_files_s2.py
+```
+4. Run the SA-BSN:
+```
+$ bash 2_script_all_profiles.sh
+```
+5. Parse the log files:
+```
+$ python 3_read_all_output.py
+```
+
+### **Scenario 3**:
+1. Enter the folder with scripts:
+```
+$ cd AdapTA/S3_CriticalCondition/Scripts/
+```
+2. Transform transition matrices into patients:
+```
+$ python 0_convert_tm_into_patient.py
+```
+3. Prepare the SA-BSN to AdapTA-S1:
+```
+$ python 1_copy_needed_files_s3.py
+```
+4. Run the SA-BSN:
+```
+$ bash 2_script_all_profiles.sh
+```
+5. Parse the log files:
+```
+$ python 3_read_all_output.py
+```
+## 2. Baseline
+### **Scenario 1**:
+1. Enter the folder with scripts:
+```
+$ cd Baseline/Baseline_S1/Scripts/
+```
+2. Transform transition matrices into patients:
+```
+$ python 0_convert_tm_into_patient.py
+```
+3. Prepare the SA-BSN to AdapTA-S1:
+```
+$ python 1_copy_needed_files_s1.py
+```
+4. Run the SA-BSN:
+```
+$ bash 2_script_all_profiles.sh
+```
+5. Parse the log files:
+```
+$ python 3_script_read_baseline.py
+```
+
+### **Scenario 2**:
+1. Enter the folder with scripts:
+```
+$ cd Baseline/Baseline_S2/Scripts/
+```
+2. Transform transition matrices into patients:
+```
+$ python 0_convert_tm_into_patient.py
+```
+3. Prepare the SA-BSN to AdapTA-S1:
+```
+$ python 1_copy_needed_files_s2.py
+```
+4. Run the SA-BSN:
+```
+$ bash 2_script_all_profiles.sh
+```
+5. Parse the log files:
+```
+$ python 3_read_all_output.py
+```
+
+### **Scenario 3**:
+1. Enter the folder with scripts:
+```
+$ cd Baseline/Baseline_S3/Scripts/
+```
+2. Transform transition matrices into patients:
+```
+$ python 0_convert_tm_into_patient.py
+```
+3. Prepare the SA-BSN to AdapTA-S1:
+```
+$ python 1_copy_needed_files_baseline.py
+```
+4. Run the SA-BSN:
+```
+$ bash 2_script_all_profiles.sh
+```
+5. Parse the log files:
+```
+$ python 3_read_all_output
+```
+
