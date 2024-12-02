@@ -39,7 +39,33 @@ $ unzip Baseline/Baseline_S3/DTMCs/DTMCs.zip -d Baseline/Baseline_S3/DTMCs/
 $ rm Baseline/Baseline_S3/DTMCs/DTMCs.zip
 ```
 
-Note: If you want to run the 
+Note: If you want to reproduce the results, first delete the outcomes from the folders:
+```
+$ find AdapTA/S1_SensorDeactivation/DTMCs/ -type d -name "output*" -exec rm -rf {} \; 2>/dev/null
+$ find AdapTA/S1_SensorDeactivation/DTMCs/ -type f -name "patient.launch*" -exec rm -rf {} \;
+$ rm AdapTA/S1_SensorDeactivation/Output_files/*
+
+$ find AdapTA/S2_PatientProfile/DTMCs/ -type d -name "output*" -exec rm -rf {} \; 2>/dev/null
+$ find AdapTA/S2_PatientProfile/DTMCs/ -type f -name "patient.launch*" -exec rm -rf {} \;
+$ rm AdapTA/S2_PatientProfile/Output_files/*
+
+$ find AdapTA/S3_CriticalCondition/DTMCs/ -type d -name "output*" -exec rm -rf {} \; 2>/dev/null
+$ find AdapTA/S3_CriticalCondition/DTMCs/ -type f -name "patient.launch*" -exec rm -rf {} \;
+$ rm AdapTA/S3_CriticalCondition/Output_files/*
+
+$ find Baseline/Baseline_S1/DTMCs/ -type d -name "output*" -exec rm -rf {} \; 2>/dev/null
+$ find Baseline/Baseline_S1/DTMCs/ -type f -name "patient.launch*" -exec rm -rf {} \;
+$ rm Baseline/Baseline_S1/Output_files/*
+
+$ find Baseline/Baseline_S2/DTMCs/ -type d -name "output*" -exec rm -rf {} \; 2>/dev/null
+$ find Baseline/Baseline_S2/DTMCs/ -type f -name "patient.launch*" -exec rm -rf {} \;
+$ rm Baseline/Baseline_S2/Output_files/*
+
+$ find Baseline/Baseline_S3/DTMCs/ -type d -name "output*" -exec rm -rf {} \; 2>/dev/null
+$ find Baseline/Baseline_S3/DTMCs/ -type f -name "patient.launch*" -exec rm -rf {} \;
+$ rm Baseline/Baseline_S3/Output_files/*
+```
+
 
 ## 1. AdapTA
 ### **Scenario 1**:
