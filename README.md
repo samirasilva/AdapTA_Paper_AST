@@ -23,13 +23,52 @@ $ unzip AdapTA_Paper.zip -d AdapTA_Paper/
 $ cd AdapTA_Paper/
 ```
 
-## 1. AdapTA
-### **Scenario 1**:
-0. Unzip the DTMCs folder:
+## **Unzip the DTMCs folders**:
 ```
 $ unzip AdapTA/S1_SensorDeactivation/DTMCs/DTMCs.zip -d AdapTA/S1_SensorDeactivation/DTMCs/
 $ rm AdapTA/S1_SensorDeactivation/DTMCs/DTMCs.zip
+$ unzip AdapTA/S2_PatientProfile/DTMCs/DTMCs.zip -d AdapTA/S2_PatientProfile/DTMCs/
+$ rm AdapTA/S2_PatientProfile/DTMCs/DTMCs.zip
+$ unzip AdapTA/S3_CriticalCondition/DTMCs/DTMCs.zip -d AdapTA/S3_CriticalCondition/DTMCs/
+$ rm AdapTA/S3_CriticalCondition/DTMCs/DTMCs.zip
+$ unzip Baseline/Baseline_S1/DTMCs/DTMCs.zip -d Baseline/Baseline_S1/DTMCs/
+$ rm Baseline/Baseline_S1/DTMCs/DTMCs.zip
+$ unzip Baseline/Baseline_S2/DTMCs/DTMCs.zip -d Baseline/Baseline_S2/DTMCs/
+$ rm Baseline/Baseline_S2/DTMCs/DTMCs.zip
+$ unzip Baseline/Baseline_S3/DTMCs/DTMCs.zip -d Baseline/Baseline_S3/DTMCs/
+$ rm Baseline/Baseline_S3/DTMCs/DTMCs.zip
 ```
+
+## **Note: If you want to reproduce the results, first delete the outcomes from the folders**:
+```
+$ find AdapTA/S1_SensorDeactivation/DTMCs/ -type d -name "output*" -exec rm -rf {} \; 2>/dev/null
+$ find AdapTA/S1_SensorDeactivation/DTMCs/ -type f -name "patient.launch*" -exec rm -rf {} \;
+$ rm AdapTA/S1_SensorDeactivation/Output_files/*
+
+$ find AdapTA/S2_PatientProfile/DTMCs/ -type d -name "output*" -exec rm -rf {} \; 2>/dev/null
+$ find AdapTA/S2_PatientProfile/DTMCs/ -type f -name "patient.launch*" -exec rm -rf {} \;
+$ rm AdapTA/S2_PatientProfile/Output_files/*
+
+$ find AdapTA/S3_CriticalCondition/DTMCs/ -type d -name "output*" -exec rm -rf {} \; 2>/dev/null
+$ find AdapTA/S3_CriticalCondition/DTMCs/ -type f -name "patient.launch*" -exec rm -rf {} \;
+$ rm AdapTA/S3_CriticalCondition/Output_files/*
+
+$ find Baseline/Baseline_S1/DTMCs/ -type d -name "output*" -exec rm -rf {} \; 2>/dev/null
+$ find Baseline/Baseline_S1/DTMCs/ -type f -name "patient.launch*" -exec rm -rf {} \;
+$ rm Baseline/Baseline_S1/Output_files/*
+
+$ find Baseline/Baseline_S2/DTMCs/ -type d -name "output*" -exec rm -rf {} \; 2>/dev/null
+$ find Baseline/Baseline_S2/DTMCs/ -type f -name "patient.launch*" -exec rm -rf {} \;
+$ rm Baseline/Baseline_S2/Output_files/*
+
+$ find Baseline/Baseline_S3/DTMCs/ -type d -name "output*" -exec rm -rf {} \; 2>/dev/null
+$ find Baseline/Baseline_S3/DTMCs/ -type f -name "patient.launch*" -exec rm -rf {} \;
+$ rm Baseline/Baseline_S3/Output_files/*
+```
+
+
+## 1. AdapTA
+### **Scenario 1**:
 1. Enter the folder with scripts:
 ```
 $ cd AdapTA/S1_SensorDeactivation/Scripts/
@@ -52,11 +91,6 @@ $ python 3_script_read.py
 ```
 
 ### **Scenario 2**:
-0. Unzip the DTMCs folder:
-```
-$ unzip AdapTA/S2_PatientProfile/DTMCs/DTMCs.zip -d AdapTA/S2_PatientProfile/DTMCs/
-$ rm AdapTA/S2_PatientProfile/DTMCs/DTMCs.zip
-```
 1. Enter the folder with scripts:
 ```
 $ cd AdapTA/S2_PatientProfile/Scripts/
@@ -79,11 +113,6 @@ $ python 3_read_all_output.py
 ```
 
 ### **Scenario 3**:
-0. Unzip the DTMCs folder:
-```
-$ unzip AdapTA/S3_CriticalCondition/DTMCs/DTMCs.zip -d AdapTA/S3_CriticalCondition/DTMCs/
-$ rm AdapTA/S3_CriticalCondition/DTMCs/DTMCs.zip
-```
 1. Enter the folder with scripts:
 ```
 $ cd AdapTA/S3_CriticalCondition/Scripts/
@@ -106,11 +135,6 @@ $ python 3_read_all_output.py
 ```
 ## 2. Baseline
 ### **Scenario 1**:
-0. Unzip the DTMCs folder:
-```
-$ unzip Baseline/Baseline_S1/DTMCs/DTMCs.zip -d Baseline/Baseline_S1/DTMCs/
-$ rm Baseline/Baseline_S1/DTMCs/DTMCs.zip
-```
 1. Enter the folder with scripts:
 ```
 $ cd Baseline/Baseline_S1/Scripts/
@@ -133,11 +157,6 @@ $ python 3_script_read_baseline.py
 ```
 
 ### **Scenario 2**:
-0. Unzip the DTMCs folder:
-```
-$ unzip Baseline/Baseline_S2/DTMCs/DTMCs.zip -d Baseline/Baseline_S2/DTMCs/
-$ rm Baseline/Baseline_S2/DTMCs/DTMCs.zip
-```
 1. Enter the folder with scripts:
 ```
 $ cd Baseline/Baseline_S2/Scripts/
@@ -160,11 +179,6 @@ $ python 3_read_all_output.py
 ```
 
 ### **Scenario 3**:
-0. Unzip the DTMCs folder:
-```
-$ unzip Baseline/Baseline_S3/DTMCs/DTMCs.zip -d Baseline/Baseline_S3/DTMCs/
-$ rm Baseline/Baseline_S3/DTMCs/DTMCs.zip
-```
 1. Enter the folder with scripts:
 ```
 $ cd Baseline/Baseline_S3/Scripts/
