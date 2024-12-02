@@ -275,7 +275,7 @@ def main(argv):
        exit(0)
        
      
-    number_of_executions=1
+    number_of_executions=5
     passing_tc_rate=[]
      
     for j in range(0,number_of_executions):

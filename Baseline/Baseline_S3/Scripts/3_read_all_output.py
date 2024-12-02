@@ -8,6 +8,8 @@ import math
 import numpy as np
 import statistics
 
+
+
 def list_subdirs(in_path):
     matches = []
     for root, dirnames, filenames in os.walk(in_path):
@@ -16,6 +18,9 @@ def list_subdirs(in_path):
             matches.append(os.path.join(root)) 
     return matches
     
+  
+    
+
 #COMPUTATION OF THE EXPECTED OUTCOME
 def compute_oracle(spo2, hr, temp, sys_bp, dias_bp, glu):
 
@@ -102,6 +107,7 @@ def read_output_prob_t2(j,resulting_file_name,patients_folder):
     for path in directories:
     
     	    BSN_output_folder=path+"/output_"+str(j)
+    
             term="deactivated"
 	    ecg="deactivated"
 	    oxi="deactivated"
@@ -192,10 +198,6 @@ def read_output_prob_t2(j,resulting_file_name,patients_folder):
 
 		        if(line.startswith("MilliSeconds Since Epoch:")):
 		            time=line[25:(len(line)-1)]
-		            id_difference=abs(id_outcome-id_oracle)
-		            content.append([str(id),os.path.basename(path),oxi,ecg,term,abps,abpd,glc,resultado,oracle,str(id_difference), oxi_risk,ecg_risk,term_risk,abps_risk,abpd_risk, glc_risk,oxi_sensor, ecg_sensor,term_sensor, abps_sensor, abpd_sensor,glc_sensor,time])
-		            sum_diff[id_difference]=sum_diff[id_difference]+1                       
-			    id=id+1
 
 		        if(line.startswith("| PATIENT_STATE:")):
 		            resultado=line[16:(len(line)-1)]
@@ -226,7 +228,11 @@ def read_output_prob_t2(j,resulting_file_name,patients_folder):
 		                   id_oracle=4
 		                else:
 		                   id_oracle=9999999999999
-
+		                id_difference=abs(id_outcome-id_oracle)
+		                content.append([str(id),os.path.basename(path),oxi,ecg,term,abps,abpd,glc,resultado,oracle,str(id_difference), oxi_risk,ecg_risk,term_risk,abps_risk,abpd_risk, glc_risk,oxi_sensor, ecg_sensor,term_sensor, abps_sensor, abpd_sensor,glc_sensor,time])
+		                sum_diff[id_difference]=sum_diff[id_difference]+1
+		                                      
+				id=id+1
 
 		               
 	    
@@ -249,16 +255,13 @@ def read_output_prob_t2(j,resulting_file_name,patients_folder):
     content.append([])
     content.append([])
     content.append(["Sum",tot_diff,str(tot_diff_perc[0]+tot_diff_perc[1]+tot_diff_perc[2]+tot_diff_perc[3]+tot_diff_perc[4])+""])
-  
-    
+		
     for row in content:
 	sheet.append(row)
-	#print(str(aux)+"\n")
-	#aux=aux+1
 	    
     # Save the workbook to a file
     workbook.save("../Output_files/output"+str(j)+"_"+resulting_file_name)
-    print(str(tot_diff_perc[0]+tot_diff_perc[1])+"\n")
+    print(tot_diff_perc[0]+tot_diff_perc[1])
     #print(tot_diff)
     return (tot_diff_perc[0]+tot_diff_perc[1])
  
@@ -274,14 +277,34 @@ def main(argv):
        print("Error!")
        exit(0)
        
+    #file = open("summary_of_results_inthefield.txt", "w") 
+    #file.write("Passing Test Case Rate and Execution Time for all executions:\n")    
+    #file.write("Ex1\tEx2\tEx3\tEx4\tEx5\tEx6\tEx7\tEx8\tEx9\tEx10\tEx11\tEx12\tEx13\tEx14\tEx15\tEx16\tEx17\tEx18\tEx19\tEx20\tEx21\tEx22\tEx23\tEx24\tEx25\tAvg|Std\n")
+   
      
-    number_of_executions=1
+     
+    number_of_executions=5
+
+        
+        
+    
     passing_tc_rate=[]
      
     for j in range(0,number_of_executions):
-       print("Ex"+str(j)+":")
        passing_tc_rate.append(read_output_prob_t2(j,'output_sensor_readings.xlsx',patients_folder))
   
-  
+    #for i in passing_tc_rate:
+    #    file.write(str(float("{:.2f}".format(i)))+"\t")  
+     
+    #average = statistics.mean(passing_tc_rate) 
+    #std_dev = statistics.stdev(passing_tc_rate)
+    
+
+    #file.write(str(float("{:.2f}".format(average)))+"|") 
+    #file.write(str(float("{:.2f}".format(std_dev)))+"\n") 
+    
+    #compute_total_time(number_of_executions,file)
+    #compute_average_cov(number_of_patients,number_of_executions,file)
+        
 if __name__ == "__main__":
     main(sys.argv)

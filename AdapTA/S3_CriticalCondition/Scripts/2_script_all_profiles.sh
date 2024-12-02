@@ -9,8 +9,8 @@ if [[ "$#" -gt 4 ]]; then
 fi
 
 if [[ "$#" -eq 0 ]]; then
-    execution_time=15
-    number_of_executions=1
+    execution_time=3600
+    number_of_executions=5
 else
     execution_time=1
     number_of_executions=$2
