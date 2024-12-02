@@ -23,13 +23,26 @@ $ unzip AdapTA_Paper.zip -d AdapTA_Paper/
 $ cd AdapTA_Paper/
 ```
 
-## 1. AdapTA
-### **Scenario 1**:
-0. Unzip the DTMCs folder:
+## **Unzip the DTMCs folders**:
 ```
 $ unzip AdapTA/S1_SensorDeactivation/DTMCs/DTMCs.zip -d AdapTA/S1_SensorDeactivation/DTMCs/
 $ rm AdapTA/S1_SensorDeactivation/DTMCs/DTMCs.zip
+$ unzip AdapTA/S2_PatientProfile/DTMCs/DTMCs.zip -d AdapTA/S2_PatientProfile/DTMCs/
+$ rm AdapTA/S2_PatientProfile/DTMCs/DTMCs.zip
+$ unzip AdapTA/S3_CriticalCondition/DTMCs/DTMCs.zip -d AdapTA/S3_CriticalCondition/DTMCs/
+$ rm AdapTA/S3_CriticalCondition/DTMCs/DTMCs.zip
+$ unzip Baseline/Baseline_S1/DTMCs/DTMCs.zip -d Baseline/Baseline_S1/DTMCs/
+$ rm Baseline/Baseline_S1/DTMCs/DTMCs.zip
+$ unzip Baseline/Baseline_S2/DTMCs/DTMCs.zip -d Baseline/Baseline_S2/DTMCs/
+$ rm Baseline/Baseline_S2/DTMCs/DTMCs.zip
+$ unzip Baseline/Baseline_S3/DTMCs/DTMCs.zip -d Baseline/Baseline_S3/DTMCs/
+$ rm Baseline/Baseline_S3/DTMCs/DTMCs.zip
 ```
+
+Note: If you want to run the 
+
+## 1. AdapTA
+### **Scenario 1**:
 1. Enter the folder with scripts:
 ```
 $ cd AdapTA/S1_SensorDeactivation/Scripts/
@@ -52,11 +65,6 @@ $ python 3_script_read.py
 ```
 
 ### **Scenario 2**:
-0. Unzip the DTMCs folder:
-```
-$ unzip AdapTA/S2_PatientProfile/DTMCs/DTMCs.zip -d AdapTA/S2_PatientProfile/DTMCs/
-$ rm AdapTA/S2_PatientProfile/DTMCs/DTMCs.zip
-```
 1. Enter the folder with scripts:
 ```
 $ cd AdapTA/S2_PatientProfile/Scripts/
@@ -79,11 +87,6 @@ $ python 3_read_all_output.py
 ```
 
 ### **Scenario 3**:
-0. Unzip the DTMCs folder:
-```
-$ unzip AdapTA/S3_CriticalCondition/DTMCs/DTMCs.zip -d AdapTA/S3_CriticalCondition/DTMCs/
-$ rm AdapTA/S3_CriticalCondition/DTMCs/DTMCs.zip
-```
 1. Enter the folder with scripts:
 ```
 $ cd AdapTA/S3_CriticalCondition/Scripts/
@@ -106,11 +109,6 @@ $ python 3_read_all_output.py
 ```
 ## 2. Baseline
 ### **Scenario 1**:
-0. Unzip the DTMCs folder:
-```
-$ unzip Baseline/Baseline_S1/DTMCs/DTMCs.zip -d Baseline/Baseline_S1/DTMCs/
-$ rm Baseline/Baseline_S1/DTMCs/DTMCs.zip
-```
 1. Enter the folder with scripts:
 ```
 $ cd Baseline/Baseline_S1/Scripts/
@@ -133,11 +131,6 @@ $ python 3_script_read_baseline.py
 ```
 
 ### **Scenario 2**:
-0. Unzip the DTMCs folder:
-```
-$ unzip Baseline/Baseline_S2/DTMCs/DTMCs.zip -d Baseline/Baseline_S2/DTMCs/
-$ rm Baseline/Baseline_S2/DTMCs/DTMCs.zip
-```
 1. Enter the folder with scripts:
 ```
 $ cd Baseline/Baseline_S2/Scripts/
@@ -160,11 +153,6 @@ $ python 3_read_all_output.py
 ```
 
 ### **Scenario 3**:
-0. Unzip the DTMCs folder:
-```
-$ unzip Baseline/Baseline_S3/DTMCs/DTMCs.zip -d Baseline/Baseline_S3/DTMCs/
-$ rm Baseline/Baseline_S3/DTMCs/DTMCs.zip
-```
 1. Enter the folder with scripts:
 ```
 $ cd Baseline/Baseline_S3/Scripts/
