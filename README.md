@@ -39,7 +39,7 @@ $ unzip Baseline/Baseline_S3/DTMCs/DTMCs.zip -d Baseline/Baseline_S3/DTMCs/
 $ rm Baseline/Baseline_S3/DTMCs/DTMCs.zip
 ```
 
-Note: If you want to reproduce the results, first delete the outcomes from the folders:
+## **Note: If you want to reproduce the results, first delete the outcomes from the folders**:
 ```
 $ find AdapTA/S1_SensorDeactivation/DTMCs/ -type d -name "output*" -exec rm -rf {} \; 2>/dev/null
 $ find AdapTA/S1_SensorDeactivation/DTMCs/ -type f -name "patient.launch*" -exec rm -rf {} \;
